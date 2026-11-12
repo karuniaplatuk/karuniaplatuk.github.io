@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kebijakan Privasi / Privacy Policy - Panah Keluar (Arrow Escape)</title>
+  <meta name="description" content="Kebijakan Privasi resmi aplikasi Panah Keluar (Arrow Escape) oleh Pt Karunia Platuk Sejahtera. Permainan puzzle asah otak 100% aman, offline, bebas iklan, dan tanpa pengumpulan data.">
+  <link rel="icon" type="image/png" href="icon.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-base: #0B0F19;
+      --bg-surface: #111827;
+      --bg-surface-elevated: #1F2937;
+      --border-subtle: #374151;
+      --border-accent: #0284C7;
+      --text-main: #F3F4F6;
+      --text-muted: #9CA3AF;
+      --text-soft: #6B7280;
+      --primary: #0284C7;
+      --primary-hover: #0369A1;
+      --primary-glow: rgba(2, 132, 199, 0.25);
+      --accent-emerald: #10B981;
+      --accent-emerald-glow: rgba(16, 185, 129, 0.2);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      line-height: 1.65;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+      padding: 32px 16px 48px;
+    }
+
+    /* Ambient Background Glow */
+    .ambient-glow {
+      position: fixed;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(2, 132, 199, 0.18) 0%, rgba(16, 185, 129, 0.08) 50%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(50px);
+    }
+
+    .container {
+      max-width: 860px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Top Navigation bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .org-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .org-brand span.org-name {
+      color: var(--text-main);
+      font-weight: 700;
+    }
+
+    /* Language Toggle Switch */
+    .lang-switcher {
+      display: inline-flex;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: #FFFFFF;
+      box-shadow: 0 2px 8px var(--primary-glow);
+    }
+
+    .lang-btn:hover:not(.active) {
+      color: var(--text-main);
+      background: var(--bg-surface-elevated);
+    }
+
+    /* Header Hero Section */
+    .hero-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 36px 30px;
+      text-align: center;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #0284C7, #10B981, #0284C7);
+    }
+
+    .app-icon {
+      width: 104px;
+      height: 104px;
+      border-radius: 22px;
+      border: 2px solid var(--border-subtle);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      margin: 0 auto 16px;
+      display: block;
+      background: #000;
+      object-fit: cover;
+    }
+
+    .app-title {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+      background: linear-gradient(135deg, #FFFFFF 40%, #9CA3AF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .app-subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 18px;
+    }
+
+    .badge-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .badge-pill.package-badge code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: #38BDF8;
+      font-weight: 600;
+    }
+
+    /* Pillars Grid */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .pillar-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px 16px;
+      text-align: center;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--primary);
+    }
+
+    .pillar-icon {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
+    .pillar-title {
+      font-family: var(--font-heading);
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .pillar-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Policy Content Sections */
+    .policy-sections {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+
+    .policy-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 26px 24px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    .policy-card h2 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .policy-card h2 .sec-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--primary-glow);
+      color: #38BDF8;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: 1px solid rgba(2, 132, 199, 0.4);
+    }
+
+    .policy-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .policy-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 12px 0;
+      padding-left: 4px;
+    }
+
+    .policy-card ul li {
+      position: relative;
+      padding-left: 24px;
+      color: var(--text-muted);
+      font-size: 0.93rem;
+    }
+
+    .policy-card ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-emerald);
+      font-weight: 700;
+    }
+
+    .highlight-box {
+      background: rgba(2, 132, 199, 0.08);
+      border-left: 3px solid var(--primary);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 12px 16px;
+      margin-top: 14px;
+      font-size: 0.9rem;
+      color: #E2E8F0;
+    }
+
+    /* Contact Box */
+    .contact-card {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.12) 0%, rgba(17, 24, 39, 1) 100%);
+      border: 1px solid rgba(2, 132, 199, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      text-align: center;
+      margin-bottom: 32px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    }
+
+    .contact-card h2 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+
+    .contact-card p {
+      color: var(--text-muted);
+      font-size: 0.93rem;
+      margin-bottom: 20px;
+    }
+
+    .email-container {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 9999px;
+      padding: 8px 18px;
+      transition: border-color 0.2s ease;
+    }
+
+    .email-container a {
+      color: #38BDF8;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .copy-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .copy-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFFFFF;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+      color: var(--text-soft);
+      font-size: 0.85rem;
+    }
+
+    footer strong {
+      color: var(--text-muted);
+    }
+
+    /* Language Switch Visibility */
+    [data-lang="id"] { display: block; }
+    [data-lang="en"] { display: none; }
+
+    body.lang-en [data-lang="id"] { display: none; }
+    body.lang-en [data-lang="en"] { display: block; }
+
+    @media (max-width: 600px) {
+      .hero-card {
+        padding: 26px 18px;
+      }
+      .app-title {
+        font-size: 1.8rem;
+      }
+      .top-bar {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-glow"></div>
+
+  <div class="container">
+    
+    <!-- Top Navigation -->
+    <header class="top-bar">
+      <div class="org-brand">
+        <span>🏢</span>
+        <span>Developer: <span class="org-name">Pt Karunia Platuk Sejahtera</span></span>
+      </div>
+
+      <!-- Language Switcher Buttons -->
+      <div class="lang-switcher" role="group" aria-label="Pilihan Bahasa / Language Selection">
+        <button id="btn-id" class="lang-btn active" onclick="setLanguage('id')">
+          <span>🇮🇩</span> Indonesia
+        </button>
+        <button id="btn-en" class="lang-btn" onclick="setLanguage('en')">
+          <span>🇬🇧</span> English
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Card -->
+    <section class="hero-card">
+      <img src="icon.png" alt="Panah Keluar Logo" class="app-icon" onerror="this.style.display='none'">
+      
+      <div data-lang="id">
+        <h1 class="app-title">Kebijakan Privasi</h1>
+        <p class="app-subtitle">Aplikasi Permainan Puzzle: <strong>Panah Keluar</strong> (Arrow Escape)</p>
+      </div>
+
+      <div data-lang="en">
+        <h1 class="app-title">Privacy Policy</h1>
+        <p class="app-subtitle">Brain Teaser Puzzle Game: <strong>Panah Keluar</strong> (Arrow Escape)</p>
+      </div>
+
+      <div class="badge-pill-row">
+        <span class="badge-pill package-badge">ID: <code>com.kps.panahkeluar</code></span>
+        <span class="badge-pill" data-lang="id">🛡️ 100% Bebas Pengumpulan Data</span>
+        <span class="badge-pill" data-lang="en">🛡️ 100% Zero Data Harvesting</span>
+        <span class="badge-pill" data-lang="id">📅 Diperbarui: 12 Nov 2026</span>
+        <span class="badge-pill" data-lang="en">📅 Updated: Nov 12, 2026</span>
+      </div>
+    </section>
+
+    <!-- Pillars Highlights -->
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <span class="pillar-icon">🔒</span>
+        <div data-lang="id">
+          <div class="pillar-title">Privasi Mutlak</div>
+          <div class="pillar-desc">Tidak ada pelacakan, pendaftaran akun, atau profil pengguna.</div>
+        </div>
+        <div data-lang="en">
+          <div class="pillar-title">Absolute Privacy</div>
+          <div class="pillar-desc">No tracking, no user registration, and no personal profiles.</div>
+        </div>
+      </div>
+
+      <div class="pillar-card">
+        <span class="pillar-icon">🚫</span>
+        <div data-lang="id">
+          <div class="pillar-title">100% Bebas Iklan</div>
+          <div class="pillar-desc">Tanpa popup, banner, maupun iklan video pengganggu.</div>
+        </div>
+        <div data-lang="en">
+          <div class="pillar-title">100% Ad-Free</div>
+          <div class="pillar-desc">Zero intrusive popups, banners, or video advertisements.</div>
+        </div>
+      </div>
+
+      <div class="pillar-card">
+        <span class="pillar-icon">⚡</span>
+        <div data-lang="id">
+          <div class="pillar-title">Mode Luring Penuh</div>
+          <div class="pillar-desc">Dapat dimainkan tanpa koneksi internet di mana saja.</div>
+        </div>
+        <div data-lang="en">
+          <div class="pillar-title">Fully Offline</div>
+          <div class="pillar-desc">Play seamlessly anywhere without an internet connection.</div>
+        </div>
+      </div>
+
+      <div class="pillar-card">
+        <span class="pillar-icon">🧸</span>
+        <div data-lang="id">
+          <div class="pillar-title">Kepatuhan COPPA</div>
+          <div class="pillar-desc">Aman untuk keluarga dan mematuhi Google Play Families Policy.</div>
+        </div>
+        <div data-lang="en">
+          <div class="pillar-title">COPPA Compliant</div>
+          <div class="pillar-desc">Safe for all ages and compliant with Google Play Families Policy.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Policy Sections -->
+    <div class="policy-sections">
+
+      <!-- Section 1 -->
+      <article class="policy-card">
+        <div data-lang="id">
+          <h2><span class="sec-num">1</span> Pendahuluan & Identitas Pengembang</h2>
+          <p>
+            Kebijakan Privasi ini menjelaskan komitmen perlindungan privasi yang diterapkan oleh <strong>Pt Karunia Platuk Sejahtera</strong> selaku pengembang dan pengelola resmi aplikasi <strong>Panah Keluar</strong> (Arrow Escape).
+          </p>
+          <p>
+            Panah Keluar dibangun dengan prinsip <em>Privacy by Design</em> — privasi bukan sekadar pelengkap, melainkan bagian mendasar dari arsitektur aplikasi kami. Permainan puzzle ini disediakan secara gratis untuk dinikmati secara mandiri dan aman.
+          </p>
+        </div>
+
+        <div data-lang="en">
+          <h2><span class="sec-num">1</span> Introduction & Developer Identity</h2>
+          <p>
+            This Privacy Policy outlines the privacy safeguards upheld by <strong>Pt Karunia Platuk Sejahtera</strong> as the official developer and publisher of <strong>Panah Keluar</strong> (Arrow Escape).
+          </p>
+          <p>
+            Panah Keluar was engineered according to the principles of <em>Privacy by Design</em> — privacy is an integral core of our architecture. This puzzle game is offered freely for pure, secure, and independent enjoyment.
+          </p>
+        </div>
+      </article>
+
+      <!-- Section 2 -->
+      <article class="policy-card">
+        <div data-lang="id">
+          <h2><span class="sec-num">2</span> Pengumpulan dan Penggunaan Data (Nol Data)</h2>
+          <p>
+            <strong>Pt Karunia Platuk Sejahtera TIDAK PERNAH mengumpulkan, menyimpan, mencatat, mentransmisikan, menjual, atau membagikan informasi pribadi apa pun dari pengguna.</strong>
+          </p>
+          <ul>
+            <li><strong>Tanpa Akun:</strong> Anda tidak perlu mendaftar, membuat profil, atau masuk (*login*) melalui media sosial.</li>
+            <li><strong>Tanpa Data Identitas:</strong> Kami tidak meminta nama, alamat surel, nomor telepon, atau data kependudukan.</li>
+            <li><strong>Tanpa Pengenal Perangkat:</strong> Kami tidak membaca nomor IMEI, Android Advertising ID (AAID), atau alamat MAC.</li>
+            <li><strong>Tanpa SDK Pelacak Pihak Ketiga:</strong> Tidak ada skrip analitik, telemetri pihak ketiga, atau pelacak perilaku yang terpasang di dalam aplikasi.</li>
+          </ul>
+          <div class="highlight-box">
+            💡 <strong>Prinsip Nol Jejak:</strong> Permainan puzzle berjalan murni di memori lokal ponsel Anda tanpa komunikasi server latar belakang.
+          </div>
+        </div>
+
+        <div data-lang="en">
+          <h2><span class="sec-num">2</span> Information Collection & Use (Zero Data)</h2>
+          <p>
+            <strong>Pt Karunia Platuk Sejahtera DOES NOT collect, store, transmit, monetize, or disclose any personal or sensitive user information whatsoever.</strong>
+          </p>
+          <ul>
+            <li><strong>No Accounts Needed:</strong> You do not need to register, configure an account, or authenticate through third-party platforms.</li>
+            <li><strong>No Personal Identifiers:</strong> We never ask for names, email addresses, phone numbers, or demographic information.</li>
+            <li><strong>No Device Identifiers:</strong> We do not access IMEI numbers, Android Advertising IDs (AAID), or MAC addresses.</li>
+            <li><strong>No Third-Party SDK Trackers:</strong> No third-party analytics SDKs, telemetry frameworks, or behavioural trackers exist within this application.</li>
+          </ul>
+          <div class="highlight-box">
+            💡 <strong>Zero Trace Policy:</strong> The entire gameplay executes strictly within your device's local memory with no background server communication.
+          </div>
+        </div>
+      </article>
+
+      <!-- Section 3 -->
+      <article class="policy-card">
+        <div data-lang="id">
+          <h2><span class="sec-num">3</span> Bebas Iklan & Bebas Pembelian Dalam Aplikasi</h2>
+          <p>
+            Kami percaya bahwa permainan yang menyenangkan harus bebas dari distraksi komersial:
+          </p>
+          <ul>
+            <li><strong>Bebas Iklan Komersial:</strong> Tidak ada iklan spanduk (*banner*), iklan interstitial yang menyela, maupun iklan video berhadiah.</li>
+            <li><strong>Tanpa Pembelian Dalam Aplikasi (No IAP):</strong> Semua level, petunjuk, dan mekanika puzzle tersedia 100% gratis tanpa transaksi tersembunyi.</li>
+            <li><strong>Tanpa Pengumpulan Data Finansial:</strong> Kami tidak pernah memproses, meminta, atau menyimpan data kartu kredit, rekening, atau dompet digital.</li>
+          </ul>
+        </div>
+
+        <div data-lang="en">
+          <h2><span class="sec-num">3</span> Ad-Free & No In-App Purchases</h2>
+          <p>
+            We strongly believe that thoughtful puzzle gameplay should remain uncompromised by commercial distractions:
+          </p>
+          <ul>
+            <li><strong>Zero Commercial Advertisements:</strong> No banner ads, full-screen interstitials, or rewarded marketing videos.</li>
+            <li><strong>No In-App Purchases (No IAP):</strong> Every level, mechanic, and hint is 100% unlocked and free forever.</li>
+            <li><strong>Zero Financial Telemetry:</strong> We never collect, process, or interface with credit cards, bank accounts, or digital wallets.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Section 4 -->
+      <article class="policy-card">
+        <div data-lang="id">
+          <h2><span class="sec-num">4</span> Izin Akses Perangkat (Device Permissions)</h2>
+          <p>
+            Aplikasi Panah Keluar dirancang seringan mungkin dan tidak meminta hak akses (*runtime permissions*) berisiko tinggi pada perangkat Android Anda:
+          </p>
+          <ul>
+            <li>Tidak memerlukan izin Kamera (<code>CAMERA</code>)</li>
+            <li>Tidak memerlukan izin Mikrofon (<code>RECORD_AUDIO</code>)</li>
+            <li>Tidak memerlukan izin Lokasi Akurat maupun Perkiraan (<code>ACCESS_FINE_LOCATION</code>)</li>
+            <li>Tidak memerlukan izin Akses Buku Kontak (<code>READ_CONTACTS</code>)</li>
+            <li>Tidak memerlukan izin Baca/Tulis Berkas Pribadi (<code>READ_EXTERNAL_STORAGE</code>)</li>
+          </ul>
+        </div>
+
+        <div data-lang="en">
+          <h2><span class="sec-num">4</span> Device Permissions</h2>
+          <p>
+            Panah Keluar is designed to be minimal and lightweight, requesting zero high-risk Android runtime permissions:
+          </p>
+          <ul>
+            <li>Does not request Camera permissions (<code>CAMERA</code>)</li>
+            <li>Does not request Microphone access (<code>RECORD_AUDIO</code>)</li>
+            <li>Does not request Precise or Coarse Location (<code>ACCESS_FINE_LOCATION</code>)</li>
+            <li>Does not request Contact list access (<code>READ_CONTACTS</code>)</li>
+            <li>Does not request Personal Storage/Media access (<code>READ_EXTERNAL_STORAGE</code>)</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Section 5 -->
+      <article class="policy-card">
+        <div data-lang="id">
+          <h2><span class="sec-num">5</span> Perlindungan Privasi Anak & Standar COPPA</h2>
+          <p>
+            Permainan ini dirancang aman untuk seluruh kalangan usia, termasuk anak-anak dan keluarga:
+          </p>
+          <ul>
+            <li><strong>Kepatuhan COPPA:</strong> Mematuhi penuh aturan <em>Children's Online Privacy Protection Act</em> (COPPA) dengan tidak mengumpulkan data apa pun dari anak-anak di bawah umur.</li>
+            <li><strong>Google Play Families Policy:</strong> Mematuhi seluruh persyaratan kebijakan keluarga Google Play demi pengalaman yang aman, sehat, dan edukatif.</li>
+            <li><strong>Konten Positif:</strong> Bebas unsur kekerasan, perjudian, bahasa kasar, maupun materi dewasa.</li>
+          </ul>
+        </div>
+
+        <div data-lang="en">
+          <h2><span class="sec-num">5</span> Children's Privacy & COPPA Compliance</h2>
+          <p>
+            Panah Keluar is fully suitable for all age groups, including children and family members:
+          </p>
+          <ul>
+            <li><strong>COPPA Compliance:</strong> Strictly adheres to the <em>Children's Online Privacy Protection Act</em> (COPPA) by maintaining zero collection of minor user data.</li>
+            <li><strong>Google Play Families Policy:</strong> Fully conforms with all Google Play family guidelines ensuring a secure and wholesome experience.</li>
+            <li><strong>Clean Wholesome Content:</strong> Contains no violence, profanity, gambling elements, or adult themes.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Section 6 -->
+      <article class="policy-card">
+        <div data-lang="id">
+          <h2><span class="sec-num">6</span> Penyimpanan Lokal & Retensi Data</h2>
+          <p>
+            Satu-satunya data yang disimpan adalah konfigurasi lokal permainan (seperti level tertinggi yang telah diselesaikan atau sakelar efek audio) yang disimpan secara internal pada ruang isolasi (<em>sandbox</em>) aplikasi di perangkat Anda.
+          </p>
+          <p>
+            Data konfigurasi ini tidak pernah dikirimkan ke server kami atau pihak mana pun, dan dapat dihapus kapan saja melalui menu Pengaturan Aplikasi atau otomatis musnah saat aplikasi dicopot (*uninstall*).
+          </p>
+        </div>
+
+        <div data-lang="en">
+          <h2><span class="sec-num">6</span> Local Storage & Data Retention</h2>
+          <p>
+            The only data ever retained is your local game state (such as highest puzzle level achieved or audio sound preference), saved exclusively inside the device's isolated application sandbox.
+          </p>
+          <p>
+            This configuration never leaves your device and can be erased instantly at any time via your device's Application Settings or by uninstalling the application.
+          </p>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Official Contact Card -->
+    <section class="contact-card">
+      <div data-lang="id">
+        <h2>Hubungi Kami 📬</h2>
+        <p>
+          Bila Anda memiliki pertanyaan, saran, atau masukan mengenai Kebijakan Privasi ini, silakan hubungi tim pengembang resmi kami:
+        </p>
+      </div>
+
+      <div data-lang="en">
+        <h2>Contact Us 📬</h2>
+        <p>
+          If you have any questions, feedback, or inquiries regarding this Privacy Policy, please reach out to our official development team:
+        </p>
+      </div>
+
+      <div style="margin-bottom: 12px; font-weight: 700; color: #FFFFFF;">
+        Pt Karunia Platuk Sejahtera
+      </div>
+
+      <div class="email-container">
+        <span>✉️</span>
+        <a href="mailto:ptkaruniaplatuksejahtera@gmail.com" id="email-link">ptkaruniaplatuksejahtera@gmail.com</a>
+        <button class="copy-btn" onclick="copyEmail()" title="Salin Email">📋 Salin</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        <strong>Pt Karunia Platuk Sejahtera</strong> • Hak Cipta Dilindungi Undang-Undang
+      </p>
+      <p style="margin-top: 6px;">
+        ID Paket: <code>com.kps.panahkeluar</code> • Aplikasi: Panah Keluar (Arrow Escape)
+      </p>
+    </footer>
+
+  </div>
+
+  <script>
+    function setLanguage(lang) {
+      if (lang === 'en') {
+        document.body.classList.add('lang-en');
+        document.getElementById('btn-en').classList.add('active');
+        document.getElementById('btn-id').classList.remove('active');
+        document.documentElement.lang = 'en';
+      } else {
+        document.body.classList.remove('lang-en');
+        document.getElementById('btn-id').classList.add('active');
+        document.getElementById('btn-en').classList.remove('active');
+        document.documentElement.lang = 'id';
+      }
+      localStorage.setItem('preferred_lang', lang);
+    }
+
+    function copyEmail() {
+      const email = "ptkaruniaplatuksejahtera@gmail.com";
+      navigator.clipboard.writeText(email).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        const orig = btn.innerText;
+        btn.innerText = "✓ Disalin!";
+        setTimeout(() => { btn.innerText = orig; }, 2000);
+      });
+    }
+
+    // Auto-detect browser language or load stored preference
+    (function initLang() {
+      const stored = localStorage.getItem('preferred_lang');
+      if (stored) {
+        setLanguage(stored);
+      } else {
+        const browserLang = navigator.language || navigator.userLanguage || '';
+        if (browserLang.startsWith('en')) {
+          setLanguage('en');
+        } else {
+          setLanguage('id');
+        }
+      }
+    })();
+  </script>
+
+</body>
+</html>
